@@ -1,0 +1,145 @@
+<!-- maybe change template driver form with reactive form to work on validation 
+pattern="[a-zA-Z ]*" for String
+ <div *ngIf="f.controls.name.errors.pattern">
+        must be String
+      </div>
+    -->
+
+<div  class="modal">
+  <div class="modal-content">
+   <div class="form-container">
+     <h1 class="form-title">
+       New Project
+     </h1>
+    <form (ngSubmit)="onAddProject(f)" #f="ngForm">
+      
+     <div class="input-container-form">
+      <input type="text" name="name" id="name" class="input-grey" 
+      required 
+      ngModel 
+      #name="ngModel">
+      <span class="floating-label">Project Name</span>  
+      <div *ngIf="name.invalid && (name.dirty || name.touched)"
+      class="show-error">
+      <div *ngIf="name.errors.required">
+      Project Name is required.
+      </div>
+
+</div>
+     </div>
+     <div class="input-container-form">
+      <input type="text" name="location" id="location" class="input-grey" 
+      required
+       ngModel 
+       
+       #location="ngModel">
+       <span class="floating-label">Location</span>  
+
+<div *ngIf="location.invalid && (location.dirty || location.touched)"
+class="show-error">
+<div *ngIf="location.errors.required">
+Location is required.
+</div>
+</div>
+     </div>
+     
+   
+
+<div class="input-container-form">
+  <select name="oreType" id="oreType" ngModel #oreType="ngModel" required class="select-style">
+    <option value="" disabled selected hidden>Ore Type</option>
+    <option value="Aluminium" class="testing-color">Aluminium</option>
+    <option value="Copper">Copper</option>
+    <option value="Iron">Iron</option>
+    <option value="Tin">Tin</option>
+  </select>
+  <!-- <span class="floating-label">Ore Type</span>  -->
+  
+<div *ngIf="oreType.invalid && (oreType.dirty || oreType.touched)"
+class="show-error">
+<div *ngIf="oreType.errors.required">
+  An Ore Type is required.
+</div>
+</div>
+</div>
+
+      
+
+
+  
+  <div class="mw-input-fl">
+  
+    <input type="number" name="tonnage" id="tonnage" class="input-grey " 
+    required
+     ngModel 
+     #tonnage="ngModel"
+     pattern="^[1-9]+[0-9]*$">
+     <span class="floating-label">Tonnage par day</span>  
+     
+  
+  <div *ngIf="tonnage.invalid && (tonnage.dirty || tonnage.touched)"
+  class="show-error">
+  <div *ngIf="tonnage.errors.required">
+  Tonnage is required.
+  </div>
+  <div *ngIf="tonnage.errors.pattern">
+    Please enter <b style="color:#c4c4c4;">Numeric value.</b> 
+  </div>
+  </div>
+  </div>
+
+
+  <div class="mw-input-fr">
+    <input type="number" name="peighty" id="peighty" class="input-grey " 
+  required
+   ngModel 
+   #peighty="ngModel"
+   pattern="^[1-9]+[0-9]*$">
+   <span class="floating-label">P80</span>  
+  
+  <div *ngIf="peighty.invalid && (peighty.dirty || peighty.touched)"
+  class="show-error">
+  <div *ngIf="peighty.errors.required">
+  Input is required.
+  </div>
+  <div *ngIf="peighty.errors.pattern">
+    Please enter <b style="color:#c4c4c4;">Numeric value.</b> 
+  </div>
+  </div>
+  </div>
+
+
+<br>
+
+<div class="input-container-form" style="margin-top:110px;">
+  <input type="number" name="budget" id="budget" class="input-grey" 
+  required
+   ngModel 
+   #budget="ngModel"
+   pattern="^[1-9]+[0-9]*$">
+   <span class="floating-label">Max Budget</span>
+  
+  <div *ngIf="budget.invalid && (budget.dirty || budget.touched)"
+  class="show-error">
+  <div *ngIf="budget.errors.required">
+  Budget is required.
+  </div>
+  <div *ngIf="budget.errors.pattern">
+  Please enter <b style="color:#c4c4c4;">Numeric value.</b> 
+  </div>
+  </div>
+</div>
+  
+<div class="upload-files">
+  <app-upload-file></app-upload-file>
+</div>
+
+ 
+ 
+      <button class="btn btn-primary btn-pos-form" type="submit" [disabled]="!f.valid">CREATE</button>
+    </form>
+
+   </div>
+    </div>
+  
+  </div>

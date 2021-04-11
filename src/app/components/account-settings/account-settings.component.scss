@@ -1,0 +1,25 @@
+.account-container {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    font-size: 20px;
+    float: right;
+    color: #cacaca;
+    margin-top: 15px;
+}
+.account-text {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.account-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 2px solid #cacaca;
+    margin-left: 20px;
+}
+.arrow-account {
+    margin-top: 10px;
+    margin-left: 10px;
+}

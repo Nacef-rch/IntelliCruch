@@ -1,0 +1,133 @@
+.modal {
+    display: block;
+    position: fixed;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #282c31;
+    background-color: rgba(40, 44, 49, 0.75);
+}
+
+.modal-content {
+    background-color: #212427;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #4d4d4d;
+    width: 65%;
+}
+
+.form-container {
+    // background-color: #fff;
+    margin: 5% auto;
+    width: 85%;
+}
+.form-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 27px;
+    font-weight: 500;
+    color: #c4c4c4;
+    padding: 0;
+    margin: 0;
+}
+
+.input-grey {
+    padding: 13px;
+    width: 100%;
+    background-color: rgba(229, 229, 229, 0.13);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+    border-radius: 5px 5px 0 0;
+    color: #c4c4c4;
+}
+.input-grey:focus,
+.input-grey:valid {
+    background-color: rgba(229, 229, 229, 0.13);
+}
+
+.input-grey::placeholder {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: rgba(229, 229, 229, 0.33);
+    font-size: 20px;
+}
+.btn-pos-form {
+    float: right;
+    margin-top: 80px;
+}
+.show-error {
+    color: #1e72fb;
+    margin-top: 10px;
+    font-size: 16px;
+    margin-bottom: -20px;
+}
+input.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched {
+    border: 1px solid #1e72fb;
+}
+.select-style {
+    padding: 13px;
+    width: 100%;
+    background-color: rgba(229, 229, 229, 0.13);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+    border-radius: 5px 5px 0 0;
+    color: #c4c4c4;
+}
+// select option {
+//     background-color: rgba(229, 229, 229, 0.13);
+//     border: none;
+//     color: #c4c4c4;
+//     margin: 13px;
+// }
+.select-style > option {
+    background-color: rgba(32, 32, 32, 0.8);
+    padding: 15px;
+    color: #c4c4c4;
+}
+.select-style > option:hover {
+}
+.mw-input-fl {
+    margin-top: 40px;
+    position: relative;
+    width: 47%;
+    float: left;
+}
+.mw-input-fr {
+    margin-top: 40px;
+    width: 47%;
+    float: right;
+    position: relative;
+}
+.input-container-form {
+    margin-top: 40px;
+    position: relative;
+}
+input:focus ~ .floating-label,
+input:not(:focus):valid ~ .floating-label {
+    top: -27px;
+    color: #c4c4c4;
+    left: 0px;
+    font-size: 17px;
+    opacity: 1;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.floating-label {
+    position: absolute;
+    font-size: 20px;
+    pointer-events: none;
+    color: rgba(229, 229, 229, 0.33);
+    left: 20px;
+    top: 10px;
+    transition: 0.2s ease all;
+}
+.upload-files {
+    margin-top: 40px;
+}

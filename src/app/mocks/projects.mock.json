@@ -1,0 +1,34 @@
+[
+    {
+        "tag":"QA",
+        "title":"Quebec ABC2",
+        "description":"IntelliCrush's optimization is composed of four main parts: scenarios, optimizers.",
+        "graph":false
+    },
+    {
+        "tag":"PN",
+        "title":"Project ABC",
+        "description":"IntelliCrush's optimization is composed of four main parts: scenarios, optimizers.",
+        "graph":false
+    },
+    {
+        "tag":"PN",
+        "title":"Project Name",
+        "description":"IntelliCrush's optimization is composed of four main parts: scenarios, optimizers.",
+        "graph":false
+    },
+    {
+        "tag":"PN",
+        "title":"Project ABC2",
+        "description":"IntelliCrush's optimization is composed of four main parts: scenarios, optimizers.",
+        "graph":true
+    },
+    {
+        "tag":"PN",
+        "title":"Project Name",
+        "description":"IntelliCrush's optimization is composed of four main parts: scenarios, optimizers.",
+        "graph":false
+    }
+
+   
+]

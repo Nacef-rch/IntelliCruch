@@ -1,0 +1,18 @@
+<div class="projects-container">
+    <h3 class="projects-head-text">Projects</h3>
+    <app-search (search)="onSearch($event)"></app-search>
+    <div class="project-cards" >
+        <div *ngFor="let project of filterProject">
+            <app-project-card [tag]="project.tag" 
+                          [title]="project.title" 
+                          [description]="project.description"
+                          [graph]="project.graph">
+                        </app-project-card>
+        </div>
+        <app-project-new-card (clickAdd)="onClick($event)"></app-project-new-card>
+       
+
+    </div>
+</div>
+<app-form-container *ngIf="true"></app-form-container>
+<!-- <app-form-container *ngIf="showModal"></app-form-container> -->

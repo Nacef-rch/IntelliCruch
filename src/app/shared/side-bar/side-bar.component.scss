@@ -1,0 +1,42 @@
+.list-container {
+    margin-top: 50px;
+}
+a {
+    padding: 8px 8px 8px 25px;
+    text-decoration: none;
+    font-size: 17px;
+    color: #f1f1f1;
+    font-weight: 700;
+    margin-bottom: 30px;
+    display: block;
+}
+.sidebar-btn-active {
+    background-color: #212427;
+    border-radius: 7px;
+    margin-right: 10px;
+    margin-left: 10px;
+    color: #1e72fb;
+}
+.material-icons svg path {
+}
+
+a:hover {
+    color: #1e72fb;
+}
+
+.material-icons,
+.icon-text {
+    vertical-align: middle;
+}
+
+.material-icons {
+    font-size: 35px;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    fill: red;
+    margin-right: 30px;
+}
+.material-icons-active {
+    margin-left: -10px;
+}

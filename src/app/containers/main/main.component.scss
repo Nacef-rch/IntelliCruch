@@ -1,0 +1,63 @@
+.sidebar {
+    height: 100%;
+    width: 85px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #282c31;
+    transition: 0.5s;
+    overflow-x: hidden;
+    border-right: 1px solid #4d4d4d;
+
+    white-space: nowrap;
+}
+.logo {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 40px;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    text-align: center;
+    display: none;
+    transition: opacity 2s ease-in-out;
+}
+.logo-mini {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 40px;
+    padding-top: 30px;
+    padding-bottom: 60px;
+    text-align: center;
+    font-weight: 700;
+}
+
+main .sidebar {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    padding: 16px;
+    margin-left: 85px;
+    transition: margin-left 0.5s;
+}
+
+@media screen and (max-height: 450px) {
+    .sidebar a {
+        font-size: 18px;
+    }
+}
+.main-container {
+    margin-right: 9vw;
+    margin-left: 5vw;
+    margin-top: 50px;
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 95%;
+    }
+}
