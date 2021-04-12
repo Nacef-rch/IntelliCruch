@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import * as ProjectsMock from '../../mocks/projects.mock.json';
+import { ProjectService } from 'src/app/services/project.service';
+
 
 @Component({
   selector: 'app-projects',
@@ -7,17 +8,16 @@ import * as ProjectsMock from '../../mocks/projects.mock.json';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
-  public projectsMock: any; 
+
   public projects: any;
   public filterProject:any;
   public showModal:boolean = false;
 
-  constructor() { }
+  constructor(private projectService: ProjectService) { }
 
   ngOnInit(): void {
-    this.projectsMock = ProjectsMock;
-      this.projects = this.projectsMock.default;
-      this.filterProject= this.projects;
+    this.projects = this.projectService.getProjects();
+    this.filterProject= this.projects;
   }
   public onSearch(value: any):void{
     const searchText = value.toUpperCase();
@@ -32,9 +32,15 @@ export class ProjectsComponent implements OnInit {
     });
 
   }
+  public onCreate(created: boolean){
+    this.showModal=false;
+  }
   public onClick(agreed: boolean){
     this.showModal=true;
     console.log(agreed);
+  }
+  public onClose(agreed: boolean){
+    this.showModal=false;
   }
 
 }

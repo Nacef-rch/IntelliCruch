@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { faEllipsisV } from '@fortawesome/free-solid-svg-icons';
+import { ProjectService } from 'src/app/services/project.service';
 
 @Component({
   selector: 'app-project-card',
@@ -8,13 +10,20 @@ import { faEllipsisV } from '@fortawesome/free-solid-svg-icons';
 })
 export class ProjectCardComponent implements OnInit {
   public faEllipsisV=faEllipsisV;
-  @Input() tag: string;
+  @Input() imageUrl: string;
   @Input() title: string;
   @Input() description: string;
   @Input() graph: boolean;
-  constructor() { }
+  @Input() id: number;
+  constructor(private projectService: ProjectService, private router:Router) { }
 
   ngOnInit(): void {
+  }
+  public onEdit():void{
+    this.projectService.setNewProject({name:this.title,oreType:"Gold"})
+    this.projectService.projectSelected.emit(this.id)
+    this.router.navigate(['/dashboard']);
+
   }
 
 }

@@ -68,27 +68,40 @@ select.ng-invalid.ng-touched {
     border: 1px solid #1e72fb;
 }
 .select-style {
+    font-size: 20px;
+    color: rgba(229, 229, 229, 0.33);
     padding: 13px;
     width: 100%;
     background-color: rgba(229, 229, 229, 0.13);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border: none;
     border-radius: 5px 5px 0 0;
-    color: #c4c4c4;
+    //color: #c4c4c4;
 }
-// select option {
-//     background-color: rgba(229, 229, 229, 0.13);
+// .testing-color {
+//     -webkit-appearance: none;
+//     -moz-appearance: none;
+//     appearance: none;
+//     text-indent: 30px;
+//     padding: 30px;
+//     height: 30px;
+//     background-color: red;
 //     border: none;
 //     color: #c4c4c4;
-//     margin: 13px;
 // }
-.select-style > option {
-    background-color: rgba(32, 32, 32, 0.8);
-    padding: 15px;
-    color: #c4c4c4;
+.select-style option {
+    // -webkit-appearance: none;
+    // -moz-appearance: none;
+    // appearance: none;
+    // text-indent: 30px;
+    // padding: 0 40px;
+    // background-color: rgba(32, 32, 32, 0.8);
+    // color: #c4c4c4;
+    font-size: 20px;
+    padding: 50px;
+    background: #5c5c5c;
 }
-.select-style > option:hover {
-}
+
 .mw-input-fl {
     margin-top: 40px;
     position: relative;
@@ -130,4 +143,20 @@ input::-webkit-inner-spin-button {
 }
 .upload-files {
     margin-top: 40px;
+}
+.upload-text {
+    color: rgba(229, 229, 229, 0.33);
+    font-size: 23px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.close-button {
+    color: #c4c4c4;
+
+    float: right;
+    cursor: pointer;
+    font-size: 25px;
+}
+.close-button:hover {
+    color: #1e72fb;
 }

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "intellicruch": {
+      "hosting": {
+        "IntelliCruch": [
+          "intellicruch"
+        ]
+      }
+    }
+  }
+}

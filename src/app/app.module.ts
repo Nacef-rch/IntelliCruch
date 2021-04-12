@@ -18,6 +18,10 @@ import { FormContainerComponent } from './containers/form-container/form-contain
 import { UploadFileComponent } from './components/upload-file/upload-file.component';
 import { ProgressComponent } from './components/progress/progress.component';
 import { DndDirective } from './shared/dnd.directive';
+import { DashboardContainerComponent } from './containers/dashboard-container/dashboard-container.component';
+import { DashboardCardComponent } from './components/dashboard-card/dashboard-card.component';
+import { DashboardCardResComponent } from './components/dashboard-card-res/dashboard-card-res.component';
+import { GraphTableContainerComponent } from './containers/graph-table-container/graph-table-container.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +38,11 @@ import { DndDirective } from './shared/dnd.directive';
     FormContainerComponent,
     UploadFileComponent,
     ProgressComponent,
-    DndDirective
+    DndDirective,
+    DashboardContainerComponent,
+    DashboardCardComponent,
+    DashboardCardResComponent,
+    GraphTableContainerComponent
   ],
   imports: [
     BrowserModule,

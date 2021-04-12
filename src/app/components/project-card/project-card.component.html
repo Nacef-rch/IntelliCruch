@@ -1,8 +1,6 @@
 <div class="card-main" *ngIf="!graph">
     <div class="small-box">
-        <span class="box-text">
-        {{tag}}
-        </span>
+        <img class="img-box" [src]="imageUrl" alt="">
     </div>
     <span class="three-dots">
         <fa-icon [icon]="faEllipsisV"></fa-icon>
@@ -15,13 +13,11 @@
             {{description}}
         </p>
     </div>
-    <button type="button" class="btn btn-primary btn-pos">Edit</button>
+    <button type="button" class="btn btn-primary btn-pos" (click)="onEdit()">Edit</button>
 </div>
 <div class="card-main" *ngIf="graph">
     <div class="small-box">
-        <span class="box-text">
-        {{tag}}
-        </span>
+        <img class="img-box" [src]="imageUrl" alt="">
     </div>
     <span class="three-dots-graph">
         <fa-icon [icon]="faEllipsisV"></fa-icon>
@@ -46,5 +42,5 @@
             </svg>
             
     </div>
-    <button type="button" class="btn btn-primary btn-pos">Edit</button>
+    <button type="button" class="btn btn-primary btn-pos" (click)="onEdit()">Edit</button>
 </div>

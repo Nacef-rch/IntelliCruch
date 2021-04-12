@@ -1,0 +1,27 @@
+<div class="graph-table-container">
+   <div class="switch-header">
+    <div class="title-text">
+        <div class="upper-text">
+            Possible flowsheets
+        </div>
+        <div class="lower-text">
+            CAPEX (M$) vs OPEX (Kwh/t)
+        </div>
+    </div>
+    <div class="switch-button">
+        <div class="graph-btn switch-btn" (click)="onClick(true)" [ngClass]="{'switch-btn-active': btnActive}">
+            <span class="center-text">Graph</span>
+        </div>
+        <div class="Table-btn switch-btn" (click)="onClick(false)"[ngClass]="{'switch-btn-active': !btnActive}">
+            <span class="center-text">Table</span>
+            
+        </div>
+    </div>
+   </div>
+   <div *ngIf="showGraph" style="color:#fff; float: right; margin-right: 200px;">
+       Graph
+   </div>
+   <div *ngIf="!showGraph"  style="color:#fff; float: right;margin-right: 200px;">
+       Table
+</div>
+</div>

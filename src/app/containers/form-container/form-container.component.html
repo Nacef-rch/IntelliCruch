@@ -8,6 +8,7 @@ pattern="[a-zA-Z ]*" for String
 <div  class="modal">
   <div class="modal-content">
    <div class="form-container">
+     <div class="close-button" (click)="onClose()"> <fa-icon [icon]="faTimes"></fa-icon></div>
      <h1 class="form-title">
        New Project
      </h1>
@@ -47,11 +48,13 @@ Location is required.
 
 <div class="input-container-form">
   <select name="oreType" id="oreType" ngModel #oreType="ngModel" required class="select-style">
-    <option value="" disabled selected hidden>Ore Type</option>
+
+      <option value="" disabled selected hidden>Ore Type</option>
     <option value="Aluminium" class="testing-color">Aluminium</option>
-    <option value="Copper">Copper</option>
+    <option value="Gold">Gold</option>
     <option value="Iron">Iron</option>
     <option value="Tin">Tin</option>
+   
   </select>
   <!-- <span class="floating-label">Ore Type</span>  -->
   
@@ -131,6 +134,7 @@ class="show-error">
 </div>
   
 <div class="upload-files">
+  <div class="upload-text">Particle Size Distribution File</div>
   <app-upload-file></app-upload-file>
 </div>
 
