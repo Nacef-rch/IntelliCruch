@@ -32,12 +32,17 @@ export class ProjectsComponent implements OnInit {
     });
 
   }
+
+  public onClickEdit(agreed: boolean){
+    this.showModal=true;
+    console.log(agreed);
+  }
   public onCreate(created: boolean){
     this.showModal=false;
   }
   public onClick(agreed: boolean){
     this.showModal=true;
-    console.log(agreed);
+
   }
   public onClose(agreed: boolean){
     this.showModal=false;

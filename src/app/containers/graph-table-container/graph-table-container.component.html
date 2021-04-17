@@ -18,10 +18,13 @@
         </div>
     </div>
    </div>
-   <div *ngIf="showGraph" style="color:#fff; float: right; margin-right: 200px;">
+   <!-- <div *ngIf="showGraph" style="color:#fff; float: right; margin-right: 200px;">
        Graph
-   </div>
-   <div *ngIf="!showGraph"  style="color:#fff; float: right;margin-right: 200px;">
-       Table
+   </div> -->
+   <div *ngIf="showGraph" >
+      <app-graph-chart></app-graph-chart>
+</div>
+   <div *ngIf="!showGraph">
+    <app-data-table></app-data-table>
 </div>
 </div>

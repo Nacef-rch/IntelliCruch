@@ -1,0 +1,15 @@
+<div class="flow-container">
+    
+<div class="slider" *ngIf="showFlow">
+  
+ 
+  
+    <div class="slides">
+        <img [src]="srcUrl"/>
+     
+    </div>
+  </div>
+  <div class="select-graph" *ngIf="!showFlow">
+    Select <span (click)="onClick()">A Point</span> To Show The Graph
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="graph-table-container">
+    <div class="switch-header">
+     <div class="title-text">
+         <div class="upper-text">
+             Flowsheet {{flowSheetNum}}
+         </div>
+         <!-- <div class="lower-text">
+            sub
+         </div> -->
+     </div>
+     <div class="switch-button">
+         <div class="graph-btn switch-btn" (click)="onClick(true)" [ngClass]="{'switch-btn-active': btnActive}">
+             <span class="center-text">Graph</span>
+         </div>
+         <div class="Table-btn switch-btn" (click)="onClick(false)"[ngClass]="{'switch-btn-active': !btnActive}">
+             <span class="center-text">List</span>
+             
+         </div>
+     </div>
+    </div>
+    <!-- *ngIf="showGraph" -->
+    <div >
+        <app-flowsheet [srcNumId]="srcNum"></app-flowsheet>
+    </div>
+   </div>

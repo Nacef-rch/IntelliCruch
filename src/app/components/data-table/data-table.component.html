@@ -1,0 +1,75 @@
+<div class="table-container" *ngIf="isDataAvailable">
+    <div class="mat-elevation-z8">
+        <table mat-table [dataSource]="dataSource" >
+      
+          
+          <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef> id </th>
+            <td mat-cell *matCellDef="let element" (click)="onClick(element.id)"> {{element.id}} </td>
+          </ng-container>
+      
+
+          <ng-container matColumnDef="Woi">
+            <th mat-header-cell *matHeaderCellDef> Woi </th>
+            <td mat-cell *matCellDef="let element" (click)="onClick(element.id)"> 
+                <span class="woi-container">
+                    {{element.Woi}}
+                </span> </td>
+          </ng-container>
+
+          <ng-container matColumnDef="Microwave">
+            <th mat-header-cell *matHeaderCellDef> Microwave </th>
+            <td mat-cell *matCellDef="let element" (click)="onClick(element.id)">
+                <span *ngIf="element.Microwave === 'with'" style="color: #1e72fb;"> 
+                    <fa-icon [icon]="faCheck"></fa-icon>
+                </span>  
+                <span *ngIf="element.Microwave === 'without'" style="color: white;"> 
+                    <fa-icon [icon]="faTimes"></fa-icon>
+                 </span>       
+            </td>
+          </ng-container>
+      
+     
+          <ng-container matColumnDef="Ore Sorter">
+            <th mat-header-cell *matHeaderCellDef> Ore Sorter </th>
+            <td mat-cell *matCellDef="let element" (click)="onClick(element.id)">
+            <span *ngIf="element.OreSorter === 'with'" style="color: #1e72fb;"> 
+                <fa-icon [icon]="faCheck"></fa-icon>
+            </span>  
+            <span *ngIf="element.OreSorter === 'without'" style="color: white;"> 
+                <fa-icon [icon]="faTimes"></fa-icon>
+             </span>   
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="Crusher Screen">
+            <th mat-header-cell *matHeaderCellDef> Crusher Screen </th>
+            <td mat-cell *matCellDef="let element" (click)="onClick(element.id)">  
+                <span *ngIf="element.CrusherScreen === 'with'" style="color: #1e72fb;"> 
+                    <fa-icon [icon]="faCheck"></fa-icon>
+                </span>  
+                <span *ngIf="element.CrusherScreen === 'without'" style="color: white;"> 
+                    <fa-icon [icon]="faTimes"></fa-icon>
+                 </span>   
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="Primary Grinding">
+            <th mat-header-cell *matHeaderCellDef> Primary Grinding </th>
+            <td mat-cell *matCellDef="let element" (click)="onClick(element.id)"> {{element.PrimaryGrinding}} </td>
+          </ng-container>
+          <ng-container matColumnDef="Secondary Grinding">
+            <th mat-header-cell *matHeaderCellDef> Secondary Grinding </th>
+            <td mat-cell *matCellDef="let element" (click)="onClick(element.id)"> {{element.SecondaryGrinding}} </td>
+          </ng-container>
+      
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      
+        <mat-paginator [pageSizeOptions]="[7,15, 25,50, 100]" showFirstLastButtons></mat-paginator>
+      </div>
+</div>
+<div class="loading-container" *ngIf="!isDataAvailable">
+    <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+</div>

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { faEllipsisV } from '@fortawesome/free-solid-svg-icons';
 import { ProjectService } from 'src/app/services/project.service';
@@ -15,14 +15,16 @@ export class ProjectCardComponent implements OnInit {
   @Input() description: string;
   @Input() graph: boolean;
   @Input() id: number;
-  constructor(private projectService: ProjectService, private router:Router) { }
+  @Output() clickEdit = new EventEmitter<boolean>();
+  constructor(private projectService: ProjectService,) { }
 
   ngOnInit(): void {
   }
   public onEdit():void{
+    this.clickEdit.emit(true);
     this.projectService.setNewProject({name:this.title,oreType:"Gold"})
     this.projectService.projectSelected.emit(this.id)
-    this.router.navigate(['/dashboard']);
+
 
   }
 

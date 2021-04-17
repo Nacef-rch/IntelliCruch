@@ -7,7 +7,7 @@ pattern="[a-zA-Z ]*" for String
 
 <div  class="modal">
   <div class="modal-content">
-   <div class="form-container">
+   <div class="form-container" *ngIf="!isLoading">
      <div class="close-button" (click)="onClose()"> <fa-icon [icon]="faTimes"></fa-icon></div>
      <h1 class="form-title">
        New Project
@@ -17,7 +17,7 @@ pattern="[a-zA-Z ]*" for String
      <div class="input-container-form">
       <input type="text" name="name" id="name" class="input-grey" 
       required 
-      ngModel 
+      [ngModel]='projectNameEdit' 
       #name="ngModel">
       <span class="floating-label">Project Name</span>  
       <div *ngIf="name.invalid && (name.dirty || name.touched)"
@@ -143,6 +143,9 @@ class="show-error">
       <button class="btn btn-primary btn-pos-form" type="submit" [disabled]="!f.valid">CREATE</button>
     </form>
 
+   </div>
+   <div class="on-loading" *ngIf="isLoading">
+     <app-on-loading (loaded)="onLoaded($event)"></app-on-loading>
    </div>
     </div>
   

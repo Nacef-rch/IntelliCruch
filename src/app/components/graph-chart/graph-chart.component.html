@@ -1,0 +1,10 @@
+<div class="chart-container" *ngIf="isDataAvailable">
+    <canvas baseChart
+[datasets]="bubbleChartData"
+[options]="bubbleChartOptions"
+[colors]="bubbleChartColors"
+[legend]="bubbleChartLegend"
+[chartType]="bubbleChartType"
+(chartClick)="chartClicked()">
+</canvas>
+</div>

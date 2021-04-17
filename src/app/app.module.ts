@@ -1,6 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ChartsModule } from 'ng2-charts';
+import { HttpClientModule } from '@angular/common/http';
+import {MatTableModule} from '@angular/material/table';
+import {MatPaginatorModule} from '@angular/material/paginator';
+
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +28,12 @@ import { DashboardContainerComponent } from './containers/dashboard-container/da
 import { DashboardCardComponent } from './components/dashboard-card/dashboard-card.component';
 import { DashboardCardResComponent } from './components/dashboard-card-res/dashboard-card-res.component';
 import { GraphTableContainerComponent } from './containers/graph-table-container/graph-table-container.component';
+import { GraphChartComponent } from './components/graph-chart/graph-chart.component';
+import { FlowsheetComponent } from './components/flowsheet/flowsheet.component';
+import { FlowSheetContainerComponent } from './containers/flow-sheet-container/flow-sheet-container.component';
+import { OnLoadingComponent } from './components/on-loading/on-loading.component';
+import { DataTableComponent } from './components/data-table/data-table.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -42,13 +54,23 @@ import { GraphTableContainerComponent } from './containers/graph-table-container
     DashboardContainerComponent,
     DashboardCardComponent,
     DashboardCardResComponent,
-    GraphTableContainerComponent
+    GraphTableContainerComponent,
+    GraphChartComponent,
+    FlowsheetComponent,
+    FlowSheetContainerComponent,
+    OnLoadingComponent,
+    DataTableComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    FormsModule
+    FormsModule,
+    ChartsModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatPaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
